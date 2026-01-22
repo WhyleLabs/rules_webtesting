@@ -4,7 +4,10 @@
 
 This is a fork of https://github.com/bazelbuild/rules_webtesting, since it is relied upon by Whyle Labs and that repository has been archived.
 
-There will likely be minimal investment in this, but primarily to keep it operating with later version with future versions of Bazel.
+There will likely be minimal investment in this, but primarily to keep it operating with later version with future versions of Bazel. The main changes since forking having been:
+* Support Bazel 9
+
+## Purpose
 
 Bazel rules and supporting code to allow testing against a browser with
 WebDriver.

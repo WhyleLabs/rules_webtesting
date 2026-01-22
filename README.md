@@ -7,6 +7,9 @@ This is a fork of https://github.com/bazelbuild/rules_webtesting, since it is re
 There will likely be minimal investment in this, but primarily to keep it operating with later version with future versions of Bazel. The main changes since forking having been:
 * Support Bazel 9
 
+NOTE: This is mainly a demonstration of the patches to make it work with Bazel 9. This is not used by BCR, and would currently require patching
+locally or pointing your own registry instance at this. If there is interesting in adding this fork to BCR, happy to chat - you can raise a discussion.
+
 ## Purpose
 
 Bazel rules and supporting code to allow testing against a browser with

@@ -13,6 +13,7 @@
 # limitations under the License.
 """Public definitions for web_test related build rules."""
 
+load("@bazel_skylib//lib:types.bzl", "types")
 load(
     "//web/internal:browser.bzl",
     _browser = "browser",
@@ -22,6 +23,8 @@ load(
     "//web/internal:custom_browser.bzl",
     _custom_browser = "custom_browser",
 )
+load("//web/internal:platform_archive.bzl", _platform_archive = "platform_archive")
+load("//web/internal:platform_metadata.bzl", _platform_metadata = "platform_metadata")
 load(
     "//web/internal:web_test.bzl",
     _web_test = "web_test",
@@ -42,10 +45,6 @@ load(
     "//web/internal:web_test_named_file.bzl",
     _web_test_named_file = "web_test_named_file",
 )
-load("@bazel_skylib//lib:types.bzl", "types")
-
-load("//web/internal:platform_archive.bzl", _platform_archive = "platform_archive")
-load("//web/internal:platform_metadata.bzl", _platform_metadata = "platform_metadata")
 
 # Expose the following rules publicly.
 platform_archive = _platform_archive

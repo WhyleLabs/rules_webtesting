@@ -16,10 +16,10 @@
 DO NOT load this file. Use "@io_bazel_rules_web//web:web.bzl".
 """
 
+load("@bazel_skylib//lib:dicts.bzl", "dicts")
 load(":metadata.bzl", "metadata")
 load(":provider.bzl", "WebTestInfo")
 load(":runfiles.bzl", "runfiles")
-load("@bazel_skylib//lib:dicts.bzl", "dicts")
 
 def _custom_browser_impl(ctx):
     """Implementation of the custom_browser rule."""

@@ -1,3 +1,5 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
 # Copyright 2017 Google Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,7 +17,6 @@
 ################################################################################
 #
 load("//web:go.bzl", "go_web_test_suite")
-load("@io_bazel_rules_go//go:def.bzl", "go_library")
 
 licenses(["notice"])  # Apache 2.0
 
@@ -25,9 +26,9 @@ go_library(
     importpath = "github.com/bazelbuild/rules_webtesting/web_testing_go/webtest",
     visibility = ["//visibility:public"],
     deps = [
+        "@com_github_tebeka_selenium//:go_default_library",
         "@rules_webtesting//go/bazel:go_default_library",
         "@rules_webtesting//go/metadata:go_default_library",
-        "@com_github_tebeka_selenium//:go_default_library",
     ],
 )
 

@@ -1,3 +1,5 @@
+load("@rules_python//python:defs.bzl", "py_binary")
+
 # Copyright 2017 Google Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,8 +17,6 @@
 ################################################################################
 #
 licenses(["notice"])  # Apache 2.0
-
-load("@rules_python//python:defs.bzl", "py_binary")
 
 py_binary(
     name = "debugger",

@@ -49,11 +49,11 @@ def _browser_repositories_extension(ctx):
                     version = tag.version
 
     if not version:
-        fail("No version of browser_repositories is specified in the dependency graph, supported versions are %s." % ', '.join(browser_versions.keys()))
+        fail("No version of browser_repositories is specified in the dependency graph, supported versions are %s." % ", ".join(browser_versions.keys()))
 
     browser_repositories = browser_versions.get(version)
     if not browser_repositories:
-        fail("Unsupported version %s of browser_repositories, supported versions are %s." % (version, ', '.join(browser_versions.keys())))
+        fail("Unsupported version %s of browser_repositories, supported versions are %s." % (version, ", ".join(browser_versions.keys())))
 
     browser_repositories()
 
@@ -80,5 +80,5 @@ browser_repositories_extension = module_extension(
     tag_classes = {
         "install": install,
         "override_version": override_version,
-    }
+    },
 )

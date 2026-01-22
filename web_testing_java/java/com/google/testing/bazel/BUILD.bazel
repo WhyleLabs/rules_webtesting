@@ -22,5 +22,5 @@ java_library(
     name = "bazel",
     srcs = glob(["*.java"]),
     visibility = ["//visibility:public"],
-    deps = ["@maven//:com_google_guava_guava",],
+    deps = ["@maven//:com_google_guava_guava"],
 )

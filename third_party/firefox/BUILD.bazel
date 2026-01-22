@@ -22,12 +22,12 @@ exports_files(["LICENSE"])
 alias(
     name = "firefox",
     testonly = True,
-    tags = ["manual"],
     actual = select({
         "//common/conditions:linux_x64": "@org_mozilla_firefox_linux_x64//:metadata",
         "//common/conditions:macos_x64": "@org_mozilla_firefox_macos_x64//:metadata",
         "//common/conditions:macos_arm64": "@org_mozilla_firefox_macos_arm64//:metadata",
         "//common/conditions:windows_x64": "@org_mozilla_firefox_windows_x64//:metadata",
     }),
+    tags = ["manual"],
     visibility = ["//browsers:__subpackages__"],
 )

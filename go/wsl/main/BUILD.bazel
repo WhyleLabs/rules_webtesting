@@ -29,7 +29,7 @@ go_library(
 
 go_binary(
     name = "main",
+    out = get_platform_executable_name(),
     embed = [":go_default_library"],
     visibility = ["//visibility:public"],
-    out = get_platform_executable_name(),
 )
